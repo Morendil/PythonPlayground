@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_namespace_packages
+from setuptools import setup, find_packages
 
 setup(
     name="Playground",
-    version="1.0.0",
     package_dir={'': 'src'},
-    packages=find_namespace_packages(where='src'),
+    packages=find_packages(where='src'),
     extras_require={
         'dev': [],
         },
-    install_requires=[]
+    install_requires=[],
+    setup_requires=['setuptools_scm'],
+    use_scm_version=True
     )
